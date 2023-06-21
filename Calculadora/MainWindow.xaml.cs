@@ -24,6 +24,7 @@ namespace Calculadora
             btnResta.Tag = new Restar();
             btnDivision.Tag = new Dividir();
             btnMultiplicacion.Tag = new Multiplicar();
+            btnModulo.Tag = new Modulo();
         }
 
         //ACCION BOTON 0,1,2,3,4,5,6,7,8,9 (BORRAR EL CERO QUE ESTA A LA IZQUIERDA CUANDO SE INGRESA EL PRIMER VALOR)
@@ -78,25 +79,29 @@ namespace Calculadora
         //INTERFAZ VALOR 1, VALOR 2
         public interface IOperacion
         {
-            decimal HacerOperation(decimal val1, decimal val2);
+            decimal HacerOperacion(decimal val1, decimal val2);
         }
 
         //OPERECIONES (INTERFAZ)
         public class Sumar : IOperacion
         {
-            public decimal HacerOperation(decimal val1, decimal val2) => val1 + val2;
+            public decimal HacerOperacion(decimal val1, decimal val2) => val1 + val2;
         }
         public class Restar : IOperacion
         {
-            public decimal HacerOperation(decimal val1, decimal val2) => val1 - val2;
+            public decimal HacerOperacion(decimal val1, decimal val2) => val1 - val2;
         }
         public class Dividir : IOperacion
         {
-            public decimal HacerOperation(decimal val1, decimal val2) => val1 / val2;
+            public decimal HacerOperacion(decimal val1, decimal val2) => val1 / val2;
         }
         public class Multiplicar : IOperacion
         {
-            public decimal HacerOperation(decimal val1, decimal val2) => val1 * val2;
+            public decimal HacerOperacion(decimal val1, decimal val2) => val1 * val2;
+        }
+        public class Modulo : IOperacion
+        {
+            public decimal HacerOperacion(decimal val1, decimal val2) => val1 % val2;
         }
 
         //BOTON IGUAL
@@ -109,8 +114,31 @@ namespace Calculadora
 
             decimal val2 = SegundoValor ?? Convert.ToDecimal(txtInput.Text);
             { 
-            txtInput.Text = (PrimerValor = OperacionActual.HacerOperation(PrimerValor, (decimal)(SegundoValor = val2))).ToString();
+            txtInput.Text = (PrimerValor = OperacionActual.HacerOperacion(PrimerValor, (decimal)(SegundoValor = val2))).ToString();
             }
+        }
+        //BOTON CAMBIO SIGNO
+        private void btnSigno_Click(object sender, RoutedEventArgs e)
+        {
+            PrimerValor = Convert.ToDecimal(txtInput.Text);
+            PrimerValor *= -1;
+            txtInput.Text = PrimerValor.ToString();
+        }
+
+        //BOTON AL CUADRADO
+        private void botonCuadrado(object sender, RoutedEventArgs e)
+        {
+            PrimerValor = Convert.ToDecimal(txtInput.Text);
+            PrimerValor = PrimerValor * PrimerValor;
+            txtInput.Text = PrimerValor.ToString();
+        }
+
+        //RAIZ CUADRADA
+        private void botonRaiz(object sender, RoutedEventArgs e)
+        {
+            PrimerValor = Convert.ToDecimal(txtInput.Text);
+            PrimerValor = (decimal)Math.Sqrt((double)PrimerValor);
+            txtInput.Text = PrimerValor.ToString();
         }
     }
 }

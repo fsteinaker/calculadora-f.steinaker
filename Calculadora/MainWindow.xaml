@@ -15,6 +15,7 @@
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
@@ -23,25 +24,27 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <TextBox x:Name="txtInput" Height="80" Grid.Row="0" Grid.ColumnSpan="4" Margin="5" TextAlignment="Right" Text="0" FontSize="50" IsReadOnly="True"/>
-            <Button x:Name="btn7" Content="7" Grid.Row="2" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick" />
-            <Button x:Name="btn8" Content="8" Grid.Row="2" Grid.Column="1" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn9" Content="9" Grid.Row="2" Grid.Column="2" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn4" Content="4" Grid.Row="3" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn5" Content="5" Grid.Row="3" Grid.Column="1" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn6" Content="6" Grid.Row="3" Grid.Column="2" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn1" Content="1" Grid.Row="4" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn2" Content="2" Grid.Row="4" Grid.Column="1" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn3" Content="3" Grid.Row="4" Grid.Column="2" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btn0" Content="0" Grid.Row="5" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick"/>
-            <Button x:Name="btnPunto" Content="," Grid.Row="5" Grid.Column="1" FontSize="30" Margin="5" Click="btnPunto_Click"/>
-            <Button x:Name="btnDivision" Content="/" Grid.Row="1" Grid.Column="3" FontSize="30" Margin="5" Click="BotonOperacion_Click"/>
-            <Button x:Name="btnMultiplicacion" Content="*" Grid.Row="2" Grid.Column="3" FontSize="40" Margin="5" Click="BotonOperacion_Click"/>
-            <Button x:Name="btnSuma" Content="+" Grid.Row="3" Grid.Column="4" FontSize="30" Margin="5" Click="BotonOperacion_Click"/>
-            <Button x:Name="btnResta" Content="-" Grid.Row="4" Grid.Column="3" FontSize="30" Margin="5" Click="BotonOperacion_Click"/>
-            <Button x:Name="btnIgual" Content="=" Grid.Row="5" Grid.Column="2" FontSize="30" Margin="5" Grid.ColumnSpan="5" Click="btnIgual_Click"/>
-            <Button x:Name="btnAtras" Content="←" Grid.Row="1" Grid.Column="0" FontSize="35" Margin="5" Click="btnAtras_Click"/>
-            <Button x:Name="btnLimpiar" Content="CE" Grid.Row="1" Grid.Column="1" FontSize="30" Margin="5" Click="btnLimpiar_Click"/>
-            <Button x:Name="btnLimpiarTodo" Content="C" Grid.Row="1" Grid.Column="2" FontSize="30" Margin="5" Click="btnLimpiarTodo_Click"/>
-        </Grid>
-    </Grid>
-</Window>
+            <Button x:Name="btn7" Content="7" Grid.Row="3" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick" />
+            <Button x:Name="btn8" Content="8" Grid.Row="3" Grid.Column="1" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn9" Content="9" Grid.Row="3" Grid.Column="2" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn4" Content="4" Grid.Row="4" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn5" Content="5" Grid.Row="4" Grid.Column="1" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn6" Content="6" Grid.Row="4" Grid.Column="2" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn1" Content="1" Grid.Row="5" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn2" Content="2" Grid.Row="5" Grid.Column="1" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn3" Content="3" Grid.Row="5" Grid.Column="2" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btn0" Content="0" Grid.Row="6" Grid.Column="0" FontSize="30" Margin="5" Click="botonClick"/>
+            <Button x:Name="btnPunto" Content="," Grid.Row="6" Grid.Column="1" FontSize="30" Margin="5" Click="btnPunto_Click"/>
+            <Button x:Name="btnDivision" Content="/" Grid.Row="2" Grid.Column="3" FontSize="30" Margin="5" Click="BotonOperacion_Click"/>
+            <Button x:Name="btnMultiplicacion" Content="*" Grid.Row="3" Grid.Column="3" FontSize="40" Margin="5" Click="BotonOperacion_Click"/>
+            <Button x:Name="btnSuma" Content="+" Grid.Row="4" Grid.Column="4" FontSize="30" Margin="5" Click="BotonOperacion_Click"/>
+            <Button x:Name="btnResta" Content="-" Grid.Row="5" Grid.Column="3" FontSize="30" Margin="5" Click="BotonOperacion_Click"/>
+            <Button x:Name="btnIgual" Content="=" Grid.Row="6" Grid.Column="2" FontSize="30" Margin="5" Grid.ColumnSpan="5" Click="btnIgual_Click"/>
+            <Button x:Name="btnAtras" Content="←" Grid.Row="2" Grid.Column="0" FontSize="35" Margin="5" Click="btnAtras_Click"/>
+            <Button x:Name="btnLimpiar" Content="CE" Grid.Row="2" Grid.Column="1" FontSize="30" Margin="5" Click="btnLimpiar_Click"/>
+            <Button x:Name="btnLimpiarTodo" Content="C" Grid.Row="2" Grid.Column="2" FontSize="30" Margin="5" Click="btnLimpiarTodo_Click"/>
+            <Button x:Name="btnSigno" Content="+/-" Grid.Row="1" Grid.Column="0" FontSize="30" Margin="5" Click="btnSigno_Click"/>
+            <Button x:Name="btnX2" Content="x2" Grid.Row="1" Grid.Column="1" FontSize="30" Margin="5" Click="botonCuadrado"/>
+            <Button x:Name="btnRaiz" Content="√" Grid.Row="1" Grid.Column="2" FontSize="30" Margin="5" Click="botonRaiz"/>
+            <Button x:Name="btnModulo" Content="%" Grid.Row="1" Grid.Column="3" FontSize="30" Margin="5" Click="BotonOperacion_Click"/>
+        </Grid></Grid></Window>
