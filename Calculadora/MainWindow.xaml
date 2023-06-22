@@ -12,7 +12,8 @@
         Height="550"
         Width="400"
         BorderThickness="0"
-        BorderBrush="Transparent">
+        BorderBrush="Transparent"
+        ResizeMode="NoResize">
     <Border CornerRadius="30" BorderThickness="10">
     <Grid>
         <Grid>
@@ -48,9 +49,9 @@
             <Button x:Name="btnSuma" Content="+" Background="#9897a9" Foreground="White" Grid.Row="4" BorderThickness="3" Grid.Column="4" FontSize="35" Margin="5" Click="BotonOperacion_Click"/>
             <Button x:Name="btnResta" Content="-" Background="#9897a9" Foreground="White" Grid.Row="5" BorderThickness="3" Grid.Column="3" FontSize="45" Margin="5" Click="BotonOperacion_Click"/>
             <Button x:Name="btnIgual" Content="=" Background="Orange" Foreground="White" FontWeight="Bold" BorderThickness="3" Grid.Row="6" Grid.Column="2" FontSize="35" Margin="5" Grid.ColumnSpan="5" Click="btnIgual_Click"/>
-            <Button x:Name="btnAtras" Content="←" Background="#9897a9" Foreground="White" Grid.Row="2" BorderThickness="3" Grid.Column="0" FontSize="35" Margin="5" Click="btnAtras_Click"/>
-            <Button x:Name="btnLimpiar" Content="CE" Background="#9897a9" Foreground="White" Grid.Row="2" BorderThickness="3" Grid.Column="1" FontSize="30" Margin="5" Click="btnLimpiar_Click"/>
-            <Button x:Name="btnLimpiarTodo" Content="C" Background="#9897a9" Foreground="White" Grid.Row="2" BorderThickness="3" Grid.Column="2" FontSize="30" Margin="5" Click="btnLimpiarTodo_Click"/>
+            <Button x:Name="btnAtras" Content="←" Background="HotPink" Foreground="White" Grid.Row="2" BorderThickness="3" Grid.Column="0" FontSize="35" Margin="5" Click="btnAtras_Click"/>
+            <Button x:Name="btnLimpiar" Content="CE" Background="HotPink" Foreground="White" Grid.Row="2" BorderThickness="3" Grid.Column="1" FontSize="30" Margin="5" Click="btnLimpiar_Click"/>
+            <Button x:Name="btnLimpiarTodo" Content="C" Background="HotPink" Foreground="White" Grid.Row="2" BorderThickness="3" Grid.Column="2" FontSize="30" Margin="5" Click="btnLimpiarTodo_Click"/>
             <Button x:Name="btnSigno" Content="+/-" Background="#9897a9" Foreground="White" Grid.Row="1" BorderThickness="3" Grid.Column="0" FontSize="30" Margin="5" Click="btnSigno_Click"/>
             <Button x:Name="btnX2" Content="x2" Background="#9897a9" Foreground="White" Grid.Row="1" BorderThickness="3" Grid.Column="1" FontSize="30" Margin="5" Click="botonCuadrado"/>
             <Button x:Name="btnRaiz" Content="√" Background="#9897a9" Foreground="White" Grid.Row="1" BorderThickness="3" Grid.Column="2" FontSize="30" Margin="5" Click="botonRaiz"/>
